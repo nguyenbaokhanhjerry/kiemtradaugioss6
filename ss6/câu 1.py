@@ -1,11 +1,12 @@
 price = float(input("Nhập đơn giá của sản phẩm: "))
 quantity = int(input("Nhập số lượng sản phẩm: "))
 
-total_price = price * quantity
-if total_price >= 1000000:
-    discount = total_price * 0.1
+sum = price * quantity
+if sum >= 1000000:
+    discount = sum * 0.1
     print(f"Giảm giá: {discount}")
+    total_price = sum - discount
 else:
     print("Không giảm giá")
-
-    
+    total_price = sum
+print("Tổng tiền phải trả: ",total_price)
